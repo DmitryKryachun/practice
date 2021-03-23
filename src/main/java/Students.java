@@ -84,14 +84,14 @@ public class Students {
     @Override
     public String toString() {
         return "Students{" +
-                "idStudent=" + idStudent +
-                ", lastName='" + lastName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", group=" + group +
-                ", department='" + department + '\'' +
-                ", discipline='" + discipline + '\'' +
-                ", mark=" + mark +
-                ", nameTeacher='" + nameTeacher + '\'' +
+                "id студента=" + idStudent +
+                ", прізвище ='" + lastName + '\'' +
+                ", імя ='" + firstName + '\'' +
+                ", група =" + group +
+                ", кафедра ='" + department + '\'' +
+                ", дисципліна ='" + discipline + '\'' +
+                ", оцінка =" + mark +
+                ", викладач ='" + nameTeacher + '\'' +
                 '}';
     }
 }

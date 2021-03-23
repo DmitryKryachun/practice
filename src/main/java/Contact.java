@@ -47,9 +47,9 @@ public class Contact {
     public String toString() {
         return "Contact{" +
                 "Id=" + Id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
+                ", ім'я ='" + firstName + '\'' +
+                ", прізвище ='" + lastName + '\'' +
+                ", адреса ='" + address + '\'' +
                 '}';
     }
 }

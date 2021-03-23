@@ -56,10 +56,10 @@ public class Order {
     public String toString() {
         return "Order{" +
                 "Id=" + Id +
-                ", name='" + name + '\'' +
-                ", courier='" + courier + '\'' +
-                ", dateTime='" + dateTime + '\'' +
-                ", type=" + type +
+                ", назва ='" + name + '\'' +
+                ", кур'єр =" + courier + '\'' +
+                ", дата ='" + dateTime + '\'' +
+                ", тип =" + type +
                 '}';
     }
 }
