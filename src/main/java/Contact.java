@@ -4,11 +4,15 @@ public class Contact {
     private String lastName;
     private String address;
 
+    static int staticId;
+
     public Contact(String firstName, String lastName, String address){
 
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
+        this.Id = staticId;
+        staticId++;
     }
 
     public int getId() {
