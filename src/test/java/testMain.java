@@ -24,5 +24,8 @@ public class testMain {
         Vipcontact vipcontact = new Vipcontact("Дмитро", "Крячун", "вул. Берегова, 20", "11/12/13", 380976655);
         System.out.println(vipcontact.toString());
 
+        EmailContact emailContact = new EmailContact("Джон", "Уік", "USA", "johnwick@jo.com");
+        System.out.println(emailContact.toString());
+
     }
 }
