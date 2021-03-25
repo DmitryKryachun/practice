@@ -1,18 +1,17 @@
-public class Contact {
+import java.io.Serializable;
+
+public class Contact extends Students implements Serializable {
     private int Id;
-    private String firstName;
-    private String lastName;
+
     private String address;
 
-    static int staticId;
+    private static int staticId;
 
-    public Contact(String firstName, String lastName, String address){
-
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
+    public Contact(int idStudent, String lastName, String firstName, int group, String department, String address) {
+        super(idStudent, lastName, firstName, group, department);
         this.Id = staticId;
         staticId++;
+        this.address = address;
     }
 
     public int getId() {
@@ -23,22 +22,6 @@ public class Contact {
         Id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public String getAddress() {
         return address;
     }
@@ -47,13 +30,15 @@ public class Contact {
         this.address = address;
     }
 
+    public static int getStaticId() {
+        return staticId;
+    }
+
     @Override
     public String toString() {
-        return "Contact{" +
-                "Id=" + Id +
-                ", ім'я ='" + firstName + '\'' +
-                ", прізвище ='" + lastName + '\'' +
-                ", адреса ='" + address + '\'' +
+        return super.toString() + " Contact{" +
+                "Id контакта=" + Id +
+                ", адреса='" + address + '\'' +
                 '}';
     }
 }

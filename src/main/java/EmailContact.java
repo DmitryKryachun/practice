@@ -1,8 +1,10 @@
-public class EmailContact extends Contact{
+import java.io.Serializable;
+
+public class EmailContact extends Contact implements Serializable {
     private String email;
 
-    public EmailContact(String firstName, String lastName, String address, String email) {
-        super(firstName, lastName, address);
+    public EmailContact(int idStudent, String lastName, String firstName, int group, String department, String address, String email) {
+        super(idStudent, lastName, firstName, group, department, address);
         this.email = email;
     }
 

@@ -1,4 +1,6 @@
-public class Students {
+import java.io.Serializable;
+
+public class Students implements Serializable {
 
     private int idStudent;
     private String lastName;
@@ -93,5 +95,6 @@ public class Students {
                 ", оцінка =" + mark +
                 ", викладач ='" + nameTeacher + '\'' +
                 '}';
+
     }
 }
