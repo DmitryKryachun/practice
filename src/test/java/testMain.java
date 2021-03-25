@@ -1,5 +1,6 @@
 
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
@@ -65,15 +66,28 @@ public class testMain {
                 scanner.nextLine(),
                 scanner.nextLine());
 
+        String textInFile = new String(order.toString()+"\n\n"+
+               student.toString()+"\n\n"+ contact.toString()+"\n\n"+ emailContact.toString());
+
+        try(FileOutputStream fos=new FileOutputStream("toString.txt"))
+        {
+            // перевод строки в байты
+            byte[] buffer = textInFile.getBytes();
+
+            fos.write(buffer, 0, buffer.length);
+        }
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
+        }
+        System.out.println("The file has been written");
 
         try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("objects.txt")))
         {
-            oos.writeObject(emailContact);
-            oos.writeObject(contact);
-            oos.writeObject(student);
             oos.writeObject(order);
-
-
+            oos.writeObject(student);
+            oos.writeObject(contact);
+            oos.writeObject(emailContact);
         }
         catch(Exception ex){
 
@@ -82,9 +96,8 @@ public class testMain {
 
 
 
-
     }
 
-    }
+}
 
 

@@ -2,6 +2,8 @@ import java.io.Serializable;
 
 public class Students implements Serializable {
 
+    private static final long serialVersionUID = 4L;
+
     private int idStudent;
     private String lastName;
     private String firstName;
