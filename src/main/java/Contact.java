@@ -37,9 +37,9 @@ public class Contact extends Students implements Serializable {
 
     @Override
     public String toString() {
-        return super.toString() + " Contact{" +
+        return "Contact{" +
                 "Id контакта=" + Id +
                 ", адреса='" + address + '\'' +
-                '}';
+                '}'+"  " +super.toString();
     }
 }
