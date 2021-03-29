@@ -1,3 +1,5 @@
+package Classes;
+
 import java.io.Serializable;
 
 public class Order implements Serializable {
@@ -57,7 +59,7 @@ public class Order implements Serializable {
 
     @Override
     public String toString() {
-        return "Order{" +
+        return "Classes.Order{" +
                 "Id=" + Id +
                 ", назва ='" + name + '\'' +
                 ", кур'єр =" + courier + '\'' +

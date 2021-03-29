@@ -1,3 +1,5 @@
+package Classes;
+
 import java.io.Serializable;
 
 public class Students implements Serializable {
@@ -87,7 +89,7 @@ public class Students implements Serializable {
 
     @Override
     public String toString() {
-        return "Students{" +
+        return "Classes.Students{" +
                 "id студента=" + idStudent +
                 ", прізвище ='" + lastName + '\'' +
                 ", імя ='" + firstName + '\'' +

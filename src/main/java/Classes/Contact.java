@@ -1,3 +1,5 @@
+package Classes;
+
 import java.io.Serializable;
 
 public class Contact extends Students implements Serializable {
@@ -37,7 +39,7 @@ public class Contact extends Students implements Serializable {
 
     @Override
     public String toString() {
-        return "Contact{" +
+        return "Classes.Contact{" +
                 "Id контакта=" + Id +
                 ", адреса='" + address + '\'' +
                 '}'+"  " +super.toString();

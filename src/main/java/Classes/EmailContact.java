@@ -1,6 +1,9 @@
+package Classes;
+
 import java.io.Serializable;
 
 public class EmailContact extends Contact implements Serializable {
+
     private static final long serialVersionUID = 2L;
     private String email;
 
@@ -19,7 +22,7 @@ public class EmailContact extends Contact implements Serializable {
 
     @Override
     public String toString() {
-        return super.toString() + " EmailContact{" +
+        return super.toString() + " Classes.EmailContact{" +
                 "email='" + email + '\'' +
                 '}';
     }
