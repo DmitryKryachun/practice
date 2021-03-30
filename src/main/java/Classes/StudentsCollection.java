@@ -14,20 +14,20 @@ public class StudentsCollection implements Serializable {
     private static final long serialVersionUID = 8L;
     private List<Students> studentsCollection = new ArrayList<Students>();
 
-    public void addStudent(){
+    public void addStudent(int id, String lst, String name, int gr, String dp, String ds, int mark, String teacher){
 
-        Scanner scanner = new Scanner(System.in);
+        //Scanner scanner = new Scanner(System.in);
         System.out.println("Student: id, lastname, name, group, department, discipline, mark, teacher");
         Students student = new Students(
-                parseInt(scanner.nextLine()),
-                scanner.nextLine(),
-                scanner.nextLine(),
-                parseInt(scanner.nextLine()),
-                scanner.nextLine());
+                id,
+                lst,
+                name,
+                gr,
+                dp);
 
-        student.setDiscipline(scanner.nextLine());
-        student.setMark(parseInt(scanner.nextLine()));
-        student.setNameTeacher(scanner.nextLine());
+        student.setDiscipline(ds);
+        student.setMark(mark);
+        student.setNameTeacher(teacher);
         studentsCollection.add(student);
     }
 

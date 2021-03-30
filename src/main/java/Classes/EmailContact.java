@@ -22,8 +22,8 @@ public class EmailContact extends Contact implements Serializable {
 
     @Override
     public String toString() {
-        return super.toString() + " Classes.EmailContact{" +
+        return " Classes.EmailContact{" +
                 "email='" + email + '\'' +
-                '}';
+                '}' + super.toString();
     }
 }

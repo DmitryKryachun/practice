@@ -14,17 +14,15 @@ public class ContactCollection implements Serializable {
     private ArrayList<Contact> contactsCollection = new ArrayList<Contact>();
     private static final long serialVersionUID = 5L;
 
-    public void addContact(){
-
-        Scanner scanner = new Scanner(System.in);
+    public void addContact(int id, String lst, String fst, int gr, String dp, String ad){
 
         System.out.println("CONTACT: id, lastname, firstname, group, department, address");
-        Contact contact = new Contact(parseInt(scanner.nextLine()),
-                scanner.nextLine(),
-                scanner.nextLine(),
-                parseInt(scanner.nextLine()),
-                scanner.nextLine(),
-                scanner.nextLine());
+        Contact contact = new Contact(id,
+                lst,
+                fst,
+                gr,
+                dp,
+                ad);
 
         contactsCollection.add(contact);
     }
