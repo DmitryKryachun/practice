@@ -9,11 +9,13 @@
     <border type="none"/>
     <children>
       <grid id="d7572" layout-manager="GridLayoutManager" row-count="8" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
+        <margin top="10" left="10" bottom="10" right="10"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-12828863"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="8d427" class="javax.swing.JButton" binding="додатиButton" default-binding="true">
@@ -30,7 +32,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11052196"/>
+            </properties>
           </component>
           <component id="67614" class="javax.swing.JSpinner" binding="spinner1" default-binding="true">
             <constraints>
@@ -44,7 +48,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11052196"/>
+            </properties>
           </component>
           <component id="3f24d" class="javax.swing.JSpinner" binding="spinner2" default-binding="true">
             <constraints>
@@ -58,7 +64,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11052196"/>
+            </properties>
           </component>
           <component id="7aaf3" class="javax.swing.JTextField" binding="textField4" default-binding="true">
             <constraints>
@@ -66,61 +74,84 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11052196"/>
+            </properties>
           </component>
           <component id="ddf49" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-1115393"/>
+              <font name="Bahnschrift" size="14"/>
+              <foreground color="-1"/>
               <text value="ID"/>
             </properties>
           </component>
           <component id="c2db2" class="javax.swing.JLabel">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-1115393"/>
+              <font name="Bahnschrift" size="14"/>
+              <foreground color="-1"/>
               <text value="lastname"/>
             </properties>
           </component>
           <component id="7bfb" class="javax.swing.JLabel">
             <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-1115393"/>
+              <font name="Bahnschrift" size="14"/>
+              <foreground color="-1"/>
               <text value="firstname"/>
             </properties>
           </component>
           <component id="fcd36" class="javax.swing.JLabel">
             <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-1115393"/>
+              <font name="Bahnschrift" size="14"/>
+              <foreground color="-1"/>
               <text value="group"/>
             </properties>
           </component>
           <component id="c39b8" class="javax.swing.JLabel">
             <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-1115393"/>
+              <font name="Bahnschrift" size="14"/>
+              <foreground color="-1"/>
               <text value="department"/>
             </properties>
           </component>
           <component id="afac8" class="javax.swing.JLabel">
             <constraints>
-              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-1115393"/>
+              <font name="Bahnschrift" size="14"/>
+              <foreground color="-1"/>
               <text value="address"/>
             </properties>
           </component>
           <component id="72b99" class="javax.swing.JLabel">
             <constraints>
-              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-1115393"/>
+              <font name="Bahnschrift" size="14"/>
+              <foreground color="-1"/>
               <text value="email"/>
             </properties>
           </component>
@@ -130,7 +161,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11052196"/>
+            </properties>
           </component>
         </children>
       </grid>

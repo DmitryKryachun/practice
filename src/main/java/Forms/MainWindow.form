@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Forms.MainWindow">
   <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-    <margin top="0" left="0" bottom="0" right="0"/>
+    <margin top="5" left="30" bottom="20" right="30"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="35" y="20" width="547" height="300"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-12828863"/>
+      <enabled value="false"/>
+      <foreground color="-12507888"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="9838c" class="javax.swing.JLabel">
@@ -14,20 +18,22 @@
         </constraints>
         <properties>
           <font size="16" style="1"/>
+          <foreground color="-1"/>
           <text value="Оберіть який обєкт додати:"/>
         </properties>
       </component>
       <component id="37759" class="javax.swing.JButton" binding="сontactButton" default-binding="true">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <horizontalTextPosition value="0"/>
           <text value="Сontact"/>
         </properties>
       </component>
       <component id="da3ee" class="javax.swing.JButton" binding="emailContactButton" default-binding="true">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Email Contact"/>
@@ -35,7 +41,7 @@
       </component>
       <component id="5d37d" class="javax.swing.JButton" binding="orderButton" default-binding="true">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Order"/>
@@ -43,20 +49,59 @@
       </component>
       <component id="a777a" class="javax.swing.JButton" binding="studentButton" default-binding="true">
         <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Student"/>
         </properties>
       </component>
-      <component id="177b5" class="javax.swing.JButton" binding="вивідІнформаціїПроВсіButton" default-binding="true">
+      <grid id="b0191" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="5" left="5" bottom="5" right="5"/>
         <constraints>
-          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="293" height="69"/>
+          </grid>
         </constraints>
         <properties>
-          <text value="Вивід і запис в файл інформації про всі обєкти"/>
+          <background color="-11578796"/>
+          <foreground color="-14210516"/>
         </properties>
-      </component>
+        <border type="none"/>
+        <children>
+          <component id="dc44b" class="javax.swing.JButton" binding="завантаженняКолекційButton" default-binding="true">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Завантаження колекцій"/>
+            </properties>
+          </component>
+          <component id="177b5" class="javax.swing.JButton" binding="вивідІнформаціїПроВсіButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Вивід колекцій"/>
+            </properties>
+          </component>
+          <component id="1a8b9" class="javax.swing.JButton" binding="збереженняВТекстButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Збереження в текст"/>
+            </properties>
+          </component>
+          <component id="663dd" class="javax.swing.JButton" binding="збереженняКолекційButton" default-binding="true">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Збереження колекцій"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
     </children>
   </grid>
 </form>

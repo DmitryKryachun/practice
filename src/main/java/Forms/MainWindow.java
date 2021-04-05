@@ -1,23 +1,23 @@
 package Forms;
 
-import Classes.ContactCollection;
-import Classes.EmailContactCollection;
-import Classes.OrderCollection;
-import Classes.StudentsCollection;
+import Classes.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
-public class MainWindow {
+public class MainWindow extends JFrame{
     public JPanel mainPanel;
     private JButton сontactButton;
     private JButton emailContactButton;
     private JButton orderButton;
     private JButton studentButton;
     private JButton вивідІнформаціїПроВсіButton;
+    private JButton завантаженняКолекційButton;
+    private JButton збереженняВТекстButton;
+    private JButton збереженняКолекційButton;
+    //private ImageIcon ico = new ImageIcon(super.getClass().getClassLoader().getResource("images/edit.png"));
 
     //collections
 
@@ -25,8 +25,10 @@ public class MainWindow {
     private OrderCollection orderCollection = new OrderCollection();
     private EmailContactCollection emailContactCollection = new EmailContactCollection();
     private ContactCollection contactCollection = new ContactCollection();
+    //private ImageIcon ico = new ImageIcon(getClass().getClassLoader().getResource("resources/images/icon.png"));
 
     public MainWindow() {
+       // this.setIconImage(ico.getImage());
         сontactButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -95,18 +97,81 @@ public class MainWindow {
                 JFrame f = new JFrame();
                 JOptionPane.showMessageDialog(f, text, "Інфо", JOptionPane.INFORMATION_MESSAGE);
 
+
+                }
+
+        });
+
+        завантаженняКолекційButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                FileInputStream fileInputStream = null;
+                try {
+
+                    fileInputStream = new FileInputStream("objects.txt");
+                    ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+
+                    contactCollection = (ContactCollection) objectInputStream.readObject();
+                    emailContactCollection = (EmailContactCollection) objectInputStream.readObject();
+                    studentsCollection = (StudentsCollection) objectInputStream.readObject();
+                    orderCollection = (OrderCollection) objectInputStream.readObject();
+
+                    JFrame f = new JFrame();
+                    JOptionPane.showMessageDialog(f, "Успішно завантажено!", "Інфо", JOptionPane.INFORMATION_MESSAGE);
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+        збереженняВТекстButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                String text = new String("");
+                text+= contactCollection.toString()+"\n"+
+                        emailContactCollection.toString()+"\n"+
+                        studentsCollection.toString()+"\n"+
+                        orderCollection.toString();
+
                 try(FileOutputStream fos=new FileOutputStream("toString.txt"))
                 {
                     byte[] buffer = text.getBytes();
                     fos.write(buffer, 0, buffer.length);
+                    JFrame f = new JFrame();
+                    JOptionPane.showMessageDialog(f, "Операція успішна!", "Інфо", JOptionPane.INFORMATION_MESSAGE);
                 }
                 catch(IOException ex){
 
                     System.out.println(ex.getMessage());
                 }
                 System.out.println("The file has been written");
-                }
+            }
         });
+        збереженняКолекційButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("objects.txt")))
+                {
 
+                    oos.writeObject(contactCollection);
+                    oos.writeObject(emailContactCollection);
+                    oos.writeObject(studentsCollection);
+                    oos.writeObject(orderCollection);
+                    oos.close();
+
+                    JFrame f = new JFrame();
+                    JOptionPane.showMessageDialog(f, "Успішно збережено!", "Інфо", JOptionPane.WARNING_MESSAGE);
+                }
+                catch(Exception ex){
+
+                    System.out.println(ex.getMessage());
+                }
+            }
+        });
     }
 }
